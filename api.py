@@ -64,6 +64,7 @@ def index():
 
 @app.route('/sub/', methods=['POST'])
 def empty():
+    return "OMG"
     return {'status': 404}
 
 
