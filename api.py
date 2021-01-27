@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, send_file
+from flask_cors import CORS
 import seaborn as sns
 import matplotlib.pyplot as plt
 import tweepy
@@ -14,6 +15,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 app = Flask(__name__)
+CORS(app)
 snowball = nltk.stem.SnowballStemmer('english', ignore_stopwords=True)
 
 
